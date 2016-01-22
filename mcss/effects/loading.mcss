@@ -1,0 +1,65 @@
+@abstract '../_prefix.mcss';
+@abstract '../_config.mcss';
+
+/* loading effect 1 */
+.m-loading1{
+    width: 80px; height: 40px;margin: 0 auto;
+    .lditm{
+        display: inline-block;width: 8px;height: 100%;
+        border-radius: 4px;background: lightgreen;
+        $animation: loading1 1s ease infinite;
+    }
+    .lditm:nth-child(2){
+        $animation-delay:0.2s;
+    }
+    .lditm:nth-child(3){
+        $animation-delay:0.4s;
+    }
+    .lditm:nth-child(4){
+        $animation-delay:0.6s;
+    }
+    .lditm:nth-child(5){
+        $animation-delay:0.8s;
+    }
+}
+
+$keyframes(loading1,{
+    0%,100%{
+        height: 40px;
+        background: lightgreen;
+    }
+    50%{
+        height: 70px;
+        margin: -15px 0;
+        background: lightblue;
+    }
+});
+
+/* loading effect 2 */
+.m-loading2{
+    position: relative;width: 150px; height: 4px;margin: 0 auto;
+    border-radius: 2px; background: lightgreen;
+    $animation: loading2Color 1.04s ease-in infinite alternate;
+    .ball{
+        display: inline-block;position: absolute; margin-top: -7px; margin-left:-8px; width: 16px; height: 16px;
+        border-radius: 50%; background: lightgreen;
+        $animation: loading2-position 1.04s ease-in infinite alternate;
+    }
+}
+$keyframes(loading2-color,{
+    0%{
+        background: lightgreen;
+    }
+    100%{
+        background: lightblue;
+    }
+});
+$keyframes(loading2-position,{
+    0%{
+        background: lightgreen;
+    }
+    100%{
+        margin-left: 142px;
+        background: lightblue;
+    }
+});

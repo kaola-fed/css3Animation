@@ -1,0 +1,93 @@
+@abstract '_config.mcss';
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;outline:none;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:normal;}
+del,ins,u,s,a,a:hover{text-decoration:none;outline:none;}
+body,textarea,input,button,select,keygen,legend{font:$fs1/1.14 $ff1;color:$fc0;outline:0;}
+body{
+	background: #f1f1f1;cursor:default;
+	font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB",\5FAE\8F6F\96C5\9ED1,tahoma,simsun,\5b8b\4f53;
+}
+a,a:hover{color:$fc2;}
+input::-ms-clear,input::-ms-reveal{display:none;}
+::-webkit-scrollbar{width:6px;height:6px;}
+::-webkit-scrollbar-track{background:none;}
+::-webkit-scrollbar-thumb{border-radius:3px;background:rgba(92,110,130,0.6);}
+::-webkit-scrollbar-button,::-webkit-scrollbar-corner{display:none;}
+/* function */
+.f-cb,.clearfix,.f-cbli li{$clearfix();}
+.f-ff1{$yahei();}
+.f-fs0{font-size:$fs0;}
+.f-fs1{font-size:$fs1;}
+.f-ib{$inline-block();}
+.f-taj{$justify();}
+.f-wsn{$nowrap();}
+.f-pre{$pre();}
+.f-wwb{$break-word();}
+.f-toe{$ellipsis();}
+.f-usn{$noselect();}
+.f-dn{display:none;}
+.f-fl{float:left;}
+.f-fr{float:right;}
+.f-tac{text-align:center !important;}
+.f-tal{text-align:left !important;}
+.f-tar{text-align:right !important;}
+.f-fw{font-weight:bold;}
+.f-cp{cursor:pointer;}
+.f-vam,.f-vama *{vertical-align:middle;}
+.f-du,.f-du:hover{text-decoration:underline;}
+.f-pdl22{ padding-left:22px !important;}
+/* skin */
+.s-fc0{color:$fc0;}
+a.s-fc0:hover{color:$fc0;}
+.s-fc1{color:$fc1;}
+a.s-fc1:hover{color:$fc1;}
+/* 通用动画 */
+$keyframes(fadein,($prefix){
+    0%{opacity:0;}
+    100%{opacity:1;}
+});
+
+.g-doc{
+	width: $pageWidth;margin:0 auto;
+}
+.g-hd{
+	border-bottom: 4px solid #c7c7c7;
+	padding: 15px;
+	background-color: #fff;
+	h1{
+		text-align: center;font-size: 36px;color: #333;
+	}
+}
+.g-bd{
+	margin-top: 20px;border:1px solid #ddd;min-height: 500px;
+	background-color: #fff;padding: 20px;
+}
+
+.m-demo{
+	width: $pageWidth;margin:0 auto;background-color: #fff;border: 1px solid #ccc;
+	margin-top: 20px;
+	h3{font-size: 18px;padding: 10px 20px;}
+	.show{
+		padding: 40px 0;
+	}
+}
+
+/* 覆盖runjs的样式 */
+div.runjs_gist{
+	width: $pageWidth;margin:0 auto 50px;background-color: #fff;
+}

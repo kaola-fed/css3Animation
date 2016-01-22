@@ -1,0 +1,8 @@
+{
+	"name":"css3animation",
+	"version":"0.0.0",
+	"author":"lzf0402@gmail.com",
+	"dependencies":{
+		"mcss":">0.4"
+	}
+}
